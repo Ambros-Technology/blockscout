@@ -13,8 +13,8 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-12 col-lg-3">
-        <p class="footer-info-text"><%= gettext("Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.") %></p>
+      <div class="col-xs-12 col-lg-6">
+        <p class="footer-info-text">2021 BCM Innovation Ltd</p>
         <div class="footer-social-icons">
           <a href="https://www.youtube.com/channel/UCzKIjqylMMBngslHazydgKQ" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Youtube") %>'>
             <div class="footer-social-icon-container fontawesome-icon youtube"></div>

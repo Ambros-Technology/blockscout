@@ -2183,6 +2183,11 @@ msgid "Telegram"
 msgstr ""
 
 #, elixir-format
+#: lib/block_scout_web/templates/layout/_footer.html.eex:28
+msgid "Youtube"
+msgstr ""
+
+#, elixir-format
 #: lib/block_scout_web/templates/layout/_footer.html.eex:60
 msgid "Test Networks"
 msgstr ""
