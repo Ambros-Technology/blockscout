@@ -1,6 +1,6 @@
 SYSTEM = $(shell uname -s)
 HOST = host.docker.internal
-DOCKER_IMAGE = blockscout_prod
+DOCKER_IMAGE = princep3/blockscout:1.1
 BS_CONTAINER_NAME = blockscout
 PG_CONTAINER_NAME = postgres
 PG_CONTAINER_IMAGE = postgres:12.5
@@ -331,7 +331,7 @@ ifdef DISPLAY_TOKEN_ICONS
 endif
 
 HAS_BLOCKSCOUT_IMAGE := $(shell docker images | grep -sw ${DOCKER_IMAGE})
-build: 
+build:
 	@echo "==> Checking for blockscout image $(DOCKER_IMAGE)"
 ifdef HAS_BLOCKSCOUT_IMAGE
 	@echo "==> Image exist. Using $(DOCKER_IMAGE)"
@@ -375,7 +375,7 @@ else
 	@$(MAKE) -f $(THIS_FILE) migrate_only
 endif
 
-start: build postgres 
+start: build postgres
 	@echo "==> Starting blockscout"
 	@docker run --rm --name $(BS_CONTAINER_NAME) \
 					$(BLOCKSCOUT_CONTAINER_PARAMS) \
@@ -388,4 +388,4 @@ run: start
 				migrate \
 				start \
 				postgres \
-				run 
+				run
